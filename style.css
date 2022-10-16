@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(78, 76, 76);
+}
+
+header{
+    padding: 3rem 3rem 0;
+}
+
+h1{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+nav li a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 25px;
+}
+
+nav li a:hover{
+    background: rgb(135, 38, 67);
+    /* background: rgb(180, 109, 131); */
+}
+
+
+.image-de-fond{
+    background-image: url(./assets/sea-g9cf7be1b1_1920-modif.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+/************* Section 1 ***************/
+
+.section1{
+    background: rgb(135, 38, 67);
+    height: 5px;
+}
+/************* Section 2 Mes réaliations***************/
+
+.section2{
+    height: 600px;
+    background: #F1F2F6;
+}
+
+.section2 h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 55px;
+}
+
+.section2 .border-picture{
+    margin-top: 100px;
+    height: 300px;
+    width: 20%;
+    border: solid 5px;
+    color: rgb(135, 38, 67);
+    border-radius: 20px;
+    background: rgb(135, 38, 67);
+    /* transition: 0.8s; */
+}
+
+.section2 .border-picture p{
+    color: rgb(219 209 212);
+    cursor: pointer;
+    line-height: 41px;
+    margin-left: 10px;
+}
+.section2 img{
+    height: 200px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* .section2 .border-picture:hover{
+    transform: scale(1.04);
+} */
+
+.section2 .flex-image{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section2 .flex-arrow{
+    display: flex;
+}
