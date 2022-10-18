@@ -13,17 +13,19 @@ body{
 }
 
 header{
-    padding: 3rem 3rem 0;
+    padding: 3rem 1rem 0;
 }
 
 h1{
     color: white;
     font-family: 'Poppins', sans-serif;
+    margin-right: auto;
 }
 
 nav{
     display: flex;
-    justify-content:space-between
+    justify-content:space-between;
+    
 }
 
 ul{
@@ -41,8 +43,8 @@ nav li a{
 }
 
 nav li a:hover{
-    background: rgb(135, 38, 67);
-    /* background: rgb(180, 109, 131); */
+    background:  #5472ae;
+    
 }
 
 
@@ -56,13 +58,13 @@ nav li a:hover{
 /************* Section 1 ***************/
 
 .section1{
-    background: rgb(135, 38, 67);
+    background: #5472ae;
     height: 5px;
 }
 /************* Section 2 Mes réaliations***************/
 
 .section2{
-    height: 600px;
+    height: 900px;
     background: #F1F2F6;
 }
 
@@ -94,6 +96,7 @@ nav li a:hover{
     height: 200px;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
+    object-fit: contain;
 }
 
 /* .section2 .border-picture:hover{
@@ -107,4 +110,104 @@ nav li a:hover{
 
 .section2 .flex-arrow{
     display: flex;
+}
+
+
+
+@media (max-width: 1009px) {
+
+    header{
+        padding: 3rem 0rem 0;
+    }
+    h1{
+        margin: auto;
+        text-align: center;
+    }
+    nav{
+        position: relative;
+        box-shadow: inset 0px -1px 0px #c5c5c6;/*pour faire la bordure sous la barre de navigation*/
+    }
+
+    .navlinks-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        background: #5472ae;
+        padding: 15px 22px 15px 20px;
+        border-right: 1px solid  #c5c5c6;
+        height: 87vh;
+        left: -181px;/*pour cacher vers la gauche les li*/
+        transition: 0.5s ease-out;/*lent à la fin*/
+    }
+
+    .navlinks-container li a{
+        border: none;
+        padding: 0;
+    }
+    .navlinks-container li a::after {
+        content: "";
+        display: block;
+        /* position: absolute; */
+        /* bottom: -3px; */
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: left;
+        background: white;
+        transition: transform 0.3s ease-out;
+      }
+      
+      .navlinks-container li a:hover::after {
+        transform: scaleX(1)
+      }
+
+    .open {
+        left: 0;/*pour faire apparaitre les items au clic sur hamburger*/
+    }
+
+
+    /* Hamburger */
+.hamburger {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
+  }
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translateY(7px);
+  }
+  .hamburger span:nth-child(3) {
+    transform: translateY(-7px);
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
 }
