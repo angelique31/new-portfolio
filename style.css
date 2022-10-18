@@ -69,14 +69,14 @@ nav li a:hover{
     background: #F1F2F6;
 }
 
-.section2 h3{
+.section2 h2{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 2rem;
     padding-top: 55px;
 }
 
-.section2 .border-picture{
+/* .section2 .border-picture{
     margin-top: 100px;
     height: 300px;
     width: 20%;
@@ -84,7 +84,7 @@ nav li a:hover{
     color: rgb(135, 38, 67);
     border-radius: 20px;
     background: rgb(135, 38, 67);
-    /* transition: 0.8s; */
+    transition: 0.8s;
 }
 
 .section2 .border-picture p{
@@ -100,19 +100,87 @@ nav li a:hover{
     object-fit: contain;
 }
 
-/* .section2 .border-picture:hover{
-    transform: scale(1.04);
-} */
 
-.section2 .flex-image{
+.section2 .work-list{
     display: flex;
     justify-content: space-evenly;
 }
 
 .section2 .flex-arrow{
     display: flex;
+} */
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
 }
 
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    height: 218px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;/*pour zoomer que l'image*/
+}
+
+.work:hover img{
+    transform: scale(1.1);/*pour zoomer que l'image*/
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #155be6);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    transition: height 0.5s;/*pour faire remonter la couche colorée sur l'image*/
+}
+.layer h3, p{
+    color:  #e6e8f4;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer p{
+    margin-bottom: 20px;
+}
+
+.layer a{
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+.fa-arrow-up-right-from-square{
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
 
 
 @media (max-width: 1009px) {
