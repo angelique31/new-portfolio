@@ -20,6 +20,7 @@ h1{
     color: white;
     font-family: 'Poppins', sans-serif;
     margin-right: auto;
+    padding-bottom: 20px;
 }
 
 nav{
@@ -137,7 +138,7 @@ nav li a:hover{
         background: #5472ae;
         padding: 15px 22px 15px 20px;
         border-right: 1px solid  #c5c5c6;
-        height: 87vh;
+        height: 85vh;
         left: -181px;/*pour cacher vers la gauche les li*/
         transition: 0.5s ease-out;/*lent à la fin*/
     }
