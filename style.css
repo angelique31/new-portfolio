@@ -76,45 +76,20 @@ nav li a:hover{
     padding-top: 55px;
 }
 
-/* .section2 .border-picture{
-    margin-top: 100px;
-    height: 300px;
-    width: 20%;
-    border: solid 5px;
-    color: rgb(135, 38, 67);
-    border-radius: 20px;
-    background: rgb(135, 38, 67);
-    transition: 0.8s;
+.container{
+    margin-left: 30px;
+    margin-right: 30px;
 }
-
-.section2 .border-picture p{
-    color: rgb(219 209 212);
-    cursor: pointer;
-    line-height: 41px;
-    margin-left: 10px;
-}
-.section2 img{
-    height: 200px;
-    width: 100%;
-    border-radius: 20px 20px 0px 0px;
-    object-fit: contain;
-}
-
-
-.section2 .work-list{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.section2 .flex-arrow{
-    display: flex;
-} */
 
 .work-list{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 50px;
+    grid-gap: 50px; */
     margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    flex-wrap: wrap;
 }
 
 .work{
@@ -125,12 +100,32 @@ nav li a:hover{
 
 .work img{
     width: 100%;
+    object-fit: contain;
     height: 218px;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;/*pour zoomer que l'image*/
 }
 
+.work .picture1{
+    height: 300px;
+}
+
+.work .picture2{
+    height: 300px;
+}
+
+.work .picture3{
+    height: 300px;
+}
+
+.work .picture4{
+    height: 270px;
+}
+
+.work .picture5{
+    height: 270px;
+}
 .work:hover img{
     transform: scale(1.1);/*pour zoomer que l'image*/
 }
