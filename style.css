@@ -13,7 +13,7 @@ body{
 }
 
 header{
-    padding: 3rem 1rem 0;
+    padding: 1rem 0 0;
 }
 
 h1{
@@ -26,7 +26,7 @@ h1{
 nav{
     display: flex;
     justify-content:space-between;
-    
+    padding: 0 20px 0 20px;
 }
 
 ul{
@@ -44,22 +44,43 @@ nav li a{
 }
 
 nav li a:hover{
-    background:  #5472ae;
+    background:   #e93de680; 
     
 }
 
-
+nav h1 span{
+    color:  #e93de6;
+}
 .image-de-fond{
     background-image: url(./assets/sea-g9cf7be1b1_1920-modif.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     height: 100vh;
 }
 
+.image-de-fond{
+    height: 100vh;
+    position: relative;
+    
+}
+.image-de-fond img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-de-fond img.active{
+    opacity: 1;
+}
 /************* Section 1 ***************/
 
 .section1{
-    background: #5472ae;
+    background: #e93de680;
     height: 5px;
 }
 /************* Section 2 Mes réaliations***************/
@@ -82,9 +103,6 @@ nav li a:hover{
 }
 
 .work-list{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 50px; */
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
@@ -132,7 +150,9 @@ nav li a:hover{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #155be6);
+    /* background: linear-gradient(rgba(0,0,0,0.6), #155be6); */
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(154 154 160));
+    /* background: linear-gradient(rgba(0,0,0,0.6), #e93de6); */
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -198,10 +218,11 @@ nav li a:hover{
         align-items: flex-start;
         position: absolute;
         top: 100%;
-        background: #5472ae;
+        /* background: #5472ae; */
+        background: #bb5cba;
         padding: 15px 22px 15px 20px;
         border-right: 1px solid  #c5c5c6;
-        height: 85vh;
+        height: 100vh;
         left: -181px;/*pour cacher vers la gauche les li*/
         transition: 0.5s ease-out;/*lent à la fin*/
     }
@@ -229,6 +250,7 @@ nav li a:hover{
 
     .open {
         left: 0;/*pour faire apparaitre les items au clic sur hamburger*/
+        z-index: 2;
     }
 
 
@@ -274,4 +296,22 @@ nav li a:hover{
   .hamburger.open span:nth-child(3) {
     transform: translate(0) rotate(-135deg);
   }
+}
+
+@media (max-width: 1009px) {
+    .section2{
+        height: 1200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .section2{
+        height: 1600px;
+    }
+}
+
+@media (max-width: 589px) {
+    .section2{
+        height: 2000px;
+    }
 }
