@@ -77,6 +77,189 @@ nav h1 span{
 .image-de-fond img.active{
     opacity: 1;
 }
+
+/*******************Modal form******************/
+
+#contact_modal {
+    /* display: none; */
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 8;
+}
+
+.contact_button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40%;
+    right: 30%;
+    transition: 0.8s;
+}
+
+.contact_button:hover{
+    background-color: #D3573C;
+    transform: scale(1.02);
+    box-shadow: 1px 1px 8px 0px  #312e2e;
+    color: black;
+}
+
+.contact_button:active{
+    transform: scale(1.1);
+}
+
+.contact_button_form {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 59px;
+    border: none;
+    background-color: #e93de680;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: auto;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #5472ae;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 35px 100px 35px;;
+    margin: auto;
+    margin-bottom: -16px;
+    animation-name: modalopen;
+    animation-duration: 0.8s;
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.modal header img {
+    cursor: pointer;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.4rem;
+}
+
+.modal header p {
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: rgb(0 0 0 / 60%);
+    font-size: 36px;
+    margin-bottom: -10px;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 1px solid hsla(0,0%,100%,.9);
+}
+
+form input::placeholder{
+    color: #daddee;
+    font-size: 1rem;
+    font-family: inherit;
+    padding-left: 10px;
+}
+
+textarea{
+    resize: none;
+    font-size: 1.7rem;
+    height: 170px;
+    background-color: transparent;
+    border: 1px solid hsla(0,0%,100%,.9);
+}
+
+textarea::placeholder{
+    color: #daddee;
+    font-size: 1rem;
+    font-family: inherit;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.contact_modal{
+    display: block;
+}
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/*******Error Form*********/
+.error span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: red;
+    line-height: 2.2rem;
+    width: 90%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+    background: #fcfcc4;
+}
+  
+.error input{
+    border: 3px solid red
+  } 
+  
+.formData .text-control:valid{
+    border: 3px solid rgb(5, 190, 5)
+  }
+
+
 /************* Section 1 ***************/
 
 .section1{

@@ -17,6 +17,7 @@
 
     <header> 
     
+        <!-- Barre de navigation -->
         <nav>
             <div class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -31,6 +32,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <!-- Slider -->
         <div class="image-de-fond">
             <img class="image-slider" src="./assets/IMG-20220425-WA0005-modif.jpg" alt="#">
             <img class="image-slider" src="./assets/IMG-20220425-WA0011-modif.jpg" alt="#">
@@ -39,6 +41,47 @@
         </div>
     </header>
 
+    <!-- Form -->
+    <div id="contact_modal"  tabindex="-1"  aria-label="modal transparent background">
+        <div class="modal" role="dialog">
+    <header>
+      <div id="header_modal">
+        <p class="contact" tabindex="1"></p>
+        <img class="close" src="./assets/close.svg" tabindex="0" role="img" alt="fermer le formulaire"/>
+      </div>
+    </header>
+
+    <form  name="reserve" action="photographer.html" method="get" >
+
+      <div class="formData first-container">
+        <label for="first" tabindex="0">Prénom</label><br>
+        <input class="text-control"  aria-label=" Entrez votre prénom" aria-labelledby="first" type="text" id="first" name="first" minlength="2" placeholder="votre prénom ici"  autocomplete="off" required /><br>
+        <span></span>
+      </div>
+
+      <div class="formData last-container">
+        <label for="last" tabindex="0">Nom</label><br>
+        <input class="text-control" aria-label="Entrez votre nom" aria-labelledby="last"  type="text" id="last" name="last"  minlength="2" placeholder="votre nom ici"  autocomplete="off" required><br>
+        <span></span>
+      </div>
+
+      <div class="formData email-container">
+        <label for="email" tabindex="0">Email</label><br>
+        <input class="text-control" aria-labelledby="email" aria-label="Entrez votre adresse email" type="email" id="email" name="email" placeholder="Exemple : email@domaine.com" autocomplete="off" required/><br>
+        <span></span>
+      </div>
+
+      <div class=" formaData message-container">
+        <label for="message" tabindex="0">Votre message</label><br>
+        <textarea class="text-control" aria-labelledby="message"  aria-label="Détail de votre message" name="message" id="message" rows="10" cols="38" placeholder="Votre message ici" autocomplete="off" required></textarea>      
+        <span></span>
+      </div>
+      <input class="contact_button_form" type="submit"  aria-label="envoyer le formulaire" tabindex="0"  value="Envoyer">
+            </form>
+        </div>
+    </div>
+
+    <!-- Section 1 -->
     <section class="section1">
 
     </section>
