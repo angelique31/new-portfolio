@@ -223,7 +223,7 @@ textarea{
     resize: none;
     font-size: 1.7rem;
     height: 170px;
-    width: 90%;
+    width: 100%;
     background-color: transparent;
     border: 1px solid hsla(0,0%,100%,.9);
     outline: none;
@@ -256,24 +256,18 @@ textarea::placeholder{
 .error span{
     font-size: 1.1rem;
     font-weight: 600;
-    color: red;
+    color: #901c1c;;
     line-height: 2.2rem;
-    width: 90%;
     border-radius: 5px;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: 10px;
-    text-align: right;
-    padding-right: 10px;
-    background: #fcfcc4;
+    
 }
   
 .error input{
-    border: 3px solid red
+    border: 3px solid #901c1c;
   } 
   
 .formData .text-control:valid{
-    border: 3px solid rgb(5, 190, 5)
+    border: 3px solid rgb(11, 141, 11)
   }
 
 /***************Coordonnées dans le formulaire***********/
@@ -460,7 +454,7 @@ h4{
 @media (max-width: 1009px) {
 
     header{
-        padding: 3rem 0rem 0;
+        padding: 0;
     }
     h1{
         margin: auto;
@@ -557,6 +551,10 @@ h4{
         transform: translate(0) rotate(-135deg);
     }
 
+    #contact_modal{
+        top: 90px;
+    }
+
     form{
         flex-direction: column;
         align-items: center;
@@ -575,6 +573,16 @@ h4{
     .section2{
         height: 1200px;
     }
+    .contact-right{
+        margin-top: -20px;
+        margin-left: 0;
+    }
+    .modal header p{
+        font-size: 1.7rem;
+    }
+    .modal header img{
+        top: -0.7rem;
+    }
 }
 
 @media (max-width: 800px) {
@@ -586,5 +594,27 @@ h4{
 @media (max-width: 589px) {
     .section2{
         height: 2000px;
+    }
+    .modal header p{
+        font-size: 1.5rem;
+    }
+    form input{
+        font-size: 1.5rem;
+        height: 50px;
+    }
+    .contact-right{
+        margin-left: 0;
+    }
+    .contact-right .adresse{
+        font-size: 1rem;
+    }
+    aside p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 402px){
+    .modal header p{
+        font-size: 1.2rem;
     }
 }
