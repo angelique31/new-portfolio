@@ -1,3 +1,5 @@
+let playOnce = true;
+
 /**
  * Faire apparaitre la popup au scroll vertical
 */
@@ -8,9 +10,10 @@ const scrollPopUp = () => {
 //comme la taille du body s'allonge en rétrécissant l'écan, il faut cette formule :
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
 
-    if(scrollValue > 0.85){
+    if(scrollValue > 0.85 && playOnce){
         popup.style.opacity = 1;
         popup.style.transform = 'none';
+        playOnce = false;
     }
 }
 window.addEventListener('scroll', scrollPopUp);

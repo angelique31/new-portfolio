@@ -413,39 +413,50 @@ h4{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 0.8rem;
-    transition: height 0.5s;/*pour faire remonter la couche colorée sur l'image*/
+    /* transition: height 0.5s;pour faire remonter la couche colorée sur l'image */
 }
 .layer h3, p{
     color:  #e6e8f4;
+    font-size: 1.25rem;
 }
 
 .layer h3{
     font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer p{
-    margin-bottom: 20px;
 }
 
 .layer a{
+    display: flex;
+    gap: 16px;
+    align-items: center;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
+.layer .layer-project{
+    gap: 50px;
+}
+
+.layer .layer-project-food{
+    gap: 40px;
+}
 .work:hover .layer{
     height: 100%;
 }
 .fa-arrow-up-right-from-square{
     background: white;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     text-align: center;
     padding-top: 10px;
+}
+
+.fa-solid, .fas{
+    font-size: 10px;
 }
 
 
