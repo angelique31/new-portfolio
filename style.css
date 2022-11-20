@@ -8,14 +8,6 @@
     text-decoration: none;
 }
 
-body{
-    background: rgb(78, 76, 76);
-}
-
-header{
-    padding: 1rem 0 0;
-}
-
 h1{
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -24,6 +16,12 @@ h1{
 }
 
 nav{
+    background: rgb(78, 76, 76);
+    width: 100%;
+    padding-top: 10px;
+}
+
+.nav-elements{
     display: flex;
     justify-content:space-between;
     padding: 0 20px 0 20px;
@@ -517,6 +515,7 @@ h4{
         align-items: center;
         position: relative;
         margin-left: 10px;
+        margin-top: 30px;
     } 
 
     .hamburger span {
@@ -569,6 +568,83 @@ h4{
     
 }
 
+/*****************Pop up**************/
+
+.pop-up {
+    position: fixed;
+    right: 0;
+    bottom: 2rem;
+    height: 250px;
+    width: 520px;
+    text-align: center;
+    background: linear-gradient(175deg, #e93de6, rgb(36, 113, 180));
+    border-radius: 76% 24% 90% 10% / 20% 85% 15% 80%;
+    box-shadow: 0 5px 10px black;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: 1s ease-out;
+  }
+  .pop-up-container {
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+  .pop-up-container h3 {
+    color: white;
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+  .button-container input {
+    border: 1px solid #333;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 1px 2px 0 black;
+    outline: none;
+    font-size: 1.2rem;
+    transition: 0.5s;
+  }
+  .button-container input:focus {
+    background: rgb(211, 242, 251);
+  }
+  
+  .button-container button {
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: 1px solid #333;
+    outline: none;
+    cursor: pointer;
+    background: white;
+    box-shadow: 1px 2px 0 black;
+    transition: 0.3s;
+  }
+  .button-container button:hover {
+    background: rgb(211, 242, 251);
+    transform: translateX(-1px);
+  }
+  .button-container button:active {
+    transform: scale(0.96);
+  }
+  .fa-times-circle {
+    position: absolute;
+    left: 2rem;
+    top: 0.7rem;
+    font-size: 1.7rem;
+    color: white;
+    text-shadow: 2px 2px 0px #333;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .fa-times-circle:hover {
+    color: rgb(211, 242, 251);
+    transform: translateX(-1px);
+  }
+  .fa-times-circle:active {
+    transform: scale(1.5);
+  }
+
 @media (max-width: 1009px) {
     .section2{
         height: 1200px;
@@ -576,6 +652,9 @@ h4{
     .contact-right{
         margin-top: -20px;
         margin-left: 0;
+    }
+    .modal{
+        width: 100%;
     }
     .modal header p{
         font-size: 1.7rem;
@@ -611,10 +690,36 @@ h4{
     aside p{
         font-size: 1rem;
     }
+
+    /**********pop up************/
+    .pop-up{
+        height: 226px;
+        width: 407px
+    }
+    .pop-up-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    .button-container input{
+        margin-bottom: 10px;
+    }
+    .fa-times-circle{
+        top: 1.7rem;
+    }
+    .button-container input,
+    .button-container button{
+        padding: 0.5rem 2rem;
+    }
+
 }
 
 @media (max-width: 402px){
     .modal header p{
         font-size: 1.2rem;
+    }
+    .pop-up{
+        width: 100%;
     }
 }

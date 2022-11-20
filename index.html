@@ -18,25 +18,28 @@
     <header> 
     
         <!-- Barre de navigation -->
-        <nav>
-            <div class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav id="navbar">
+            <div class="nav-elements">
+                <div class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h1><strong><span>P</span>ortfolio<br>Angélique <span>Rosin</span></strong></h1>
+                <ul class="navlinks-container">
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Mon cv</a></li>
+                    <li><a href="#">Réalisations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-            <h1><strong><span>P</span>ortfolio<br>Angélique <span>Rosin</span></strong></h1>
-            <ul class="navlinks-container">
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Mon cv</a></li>
-                <li><a href="#">Réalisations</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            
         </nav>
         <!-- Slider -->
         <div class="image-de-fond">
-            <img class="image-slider" src="./assets/IMG-20220425-WA0005-modif.jpg" alt="#">
-            <img class="image-slider" src="./assets/IMG-20220425-WA0011-modif.jpg" alt="#">
-            <img class="image-slider" src="./assets/IMG-20220715-WA0003-modif.jpg" alt="#">
+            <img class="image-slider" src="./assets/IMG-20220425-WA0005.jpg" alt="#">
+            <img class="image-slider" src="./assets/IMG-20220425-WA0011.jpg" alt="#">
+            <img class="image-slider" src="./assets/IMG-20220715-WA0003.jpg" alt="#">
             <img class="image-slider" src="./assets/sea-g9cf7be1b1_1920-modif.jpg" alt="#">
         </div>
     </header>
@@ -164,11 +167,22 @@
             </div>
             </div>
         </div>   
-            
-             
     </section>
+
+    <!-- pop up -->
+    <div class="pop-up" id="popup">
+        <div class="pop-up-container">
+          <h3>N'oubliez pas<br/>Contactez-moi</h3>
+          <div class="button-container">
+            <input type="email" placeholder="please enter you email">
+            <button>Submit</button>
+          </div>
+          <i class="far fa-times-circle" id="closeBtn"></i>
+        </div>
+      </div>
 
     <script src="/src/slider.js"></script>
     <script src="/src/form.js"></script>
+    <script src="/src/popUp.js"></script>
 </body>
 </html>
